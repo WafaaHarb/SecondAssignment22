@@ -7,24 +7,11 @@
     <title>Tasks</title>
 </head>
 <body>
-
-
-
-    <h1>{{$task -> name}}</h1>
-
-
-
-
-
-   <!-- <ul>
-        <? /* php foreach ($tasks as $key => $task): ?>
-            <li> <a href = "{{'tasks/'. $key}}"><?php echo $task ?></a></li>
-            <?php endforeach; */?>
+    <ul>
+        @foreach ($tasks as $index => $task):
+        <li> <a href = "contact/.{{'$task -> id}}">{{$task -> name}}</a></li>
+        @endforeach
 
     </ul>
-
--->
-
-
 </body>
 </html>

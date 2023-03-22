@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
+
 
 /*
 Route::get('/', function () {
@@ -67,5 +69,9 @@ Route::get('show/{id}', function ($id) {
 });
 
 
+Route::get('about', [TaskController::class, 'show_name']);
+Route::get('about', [TaskController::class, 'send_name']);
+Route::get('contact', [TaskController::class, 'index']);
+Route::get('contact/{id}', [TaskController::class, 'index']);
 
 
